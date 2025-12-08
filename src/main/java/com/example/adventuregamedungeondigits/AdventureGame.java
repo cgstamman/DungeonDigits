@@ -1,10 +1,10 @@
-package com.example.adventuregamedungeondigits;
-
+package javafx.application.Application;
+import com.example.adventuregamedungeondigits.git;
 import javafx.application.Application;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 
 import java.util.Random;
 
-public class AdventureGame extends Application {
+public static class AdventureGame extends Application {
 
     private static final int MAP_SIZE = 10;
 
@@ -48,10 +48,10 @@ public class AdventureGame extends Application {
         Button west  = new Button("←");
         Button east  = new Button("→");
 
-        north.setOnAction(e -> move(0,-1));
-        south.setOnAction(e -> move(0, 1));
-        west.setOnAction(e -> move(-1,0));
-        east.setOnAction(e -> move(1, 0));
+        north.setOnAction(_ -> move(0,-1));
+        south.setOnAction(_ -> move(0, 1));
+        west.setOnAction(_ -> move(-1,0));
+        east.setOnAction(_ -> move(1, 0));
 
         GridPane nav = new GridPane();
         nav.setHgap(5);
@@ -68,10 +68,10 @@ public class AdventureGame extends Application {
         Button search = new Button("Search");
         Button sleep  = new Button("Sleep");
 
-        fight.setOnAction(e -> fight());
-        run.setOnAction(e -> flee());
-        search.setOnAction(e -> search());
-        sleep.setOnAction(e -> sleep());
+        fight.setOnAction(_ -> fight());
+        run.setOnAction(_ -> flee());
+        search.setOnAction(_ -> search());
+        sleep.setOnAction(_ -> sleep());
 
         VBox actions = new VBox(10, fight, run, search, sleep);
         actions.setAlignment(Pos.CENTER);
@@ -114,8 +114,7 @@ public class AdventureGame extends Application {
 
                 Label cell = new Label("   ");
                 cell.setMinSize(25,25);
-                cell.setStyle("-fx-border-color:black;");
-
+                cell.setStyle("-fx-border-color:black");
                 if (dungeon[i][j].blocked)
                     cell.setStyle(cell.getStyle()+"-fx-background-color:gray;");
 
@@ -291,4 +290,13 @@ public class AdventureGame extends Application {
             armorClass=10 + dexterity/3;
         }
     }
+}
+git remote;
+ SimpleObjectProperty<add> origin = new SimpleObjectProperty<>(this, "origin");
+https://github.com/cgstamman/DungeonDigits.git
+git branch; -M main;
+git push; -
+SimpleObjectProperty<u> origin = new SimpleObjectProperty<>(this, "origin"); main
+
+private static class add {
 }
